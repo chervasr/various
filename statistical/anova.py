@@ -5,21 +5,6 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 from statistical.fdr import get_false_discovery_rate
 
 def anova(df: pd.DataFrame, column_classes: str) -> pd.DataFrame:
-    """
-    _summary_
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        _description_
-    column_classes : str
-        _description_
-
-    Returns
-    -------
-    pd.DataFrame
-        _description_
-    """
     
     res = stat()
     
@@ -40,20 +25,6 @@ def anova(df: pd.DataFrame, column_classes: str) -> pd.DataFrame:
     return pval
 
 def render_and_tukey_top_fdr(df: pd.DataFrame, column_classes: str, pval: pd.DataFrame, fdr_limit: float = 0.05):
-    """
-    _summary_
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        _description_
-    column_classes : str
-        _description_
-    pval : pd.DataFrame
-        _description_
-    fdr_limit : float, optional
-        _description_, by default 0.05
-    """
     padj005 = pval[pval['FDR'] <= fdr_limit]
     padj005.head()
     for names in padj005.index.values:

@@ -8,8 +8,6 @@ def main():
     
     # Prepare dataframe
     df = load_dataframe_from_csv(file)
-    # TODO What if error reading the file?
-    # TODO What if error building the dataframe?
 
     ## Asking column name with variables
     column_classes = input("Please, enter column name with variables: ")

@@ -1,19 +1,4 @@
 def get_false_discovery_rate(pval, column):
-    """
-    _summary_
-
-    Parameters
-    ----------
-    pval : pd.DataFrame
-        _description_
-    column: str | int
-        _description_
-
-    Returns
-    -------
-    list
-        _description_
-    """
     p_adj_list = []
 
     nvalues = len(pval)
